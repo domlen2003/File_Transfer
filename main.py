@@ -61,8 +61,7 @@ root = tk.Tk()
 root.title("File Copy")
 root.geometry("700x180")
 root.resizable(0, 0)
-root.mainloop()
-update_strings()
+
 
 canvas = tk.Canvas(root, height=100, width=700, bg="#37393F")
 canvas.pack()
@@ -78,3 +77,7 @@ destFolder.pack()
 
 copy = tk.Button(root, text="Copy", fg="white", bg="#37393F", command=copy)
 copy.pack()
+
+update_strings()
+root.mainloop()
+
