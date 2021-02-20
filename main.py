@@ -33,9 +33,10 @@ def copy():
     i = 0
     print("Copying from %s to %s" % (src_dir, dst_dir))
     for (dirpath, dirnames, filenames) in walk(src_dir):
+        digits = len(str(len(filenames)))
         for file in filenames:
             i += 1
-            copy_rename(file, name + " " + i.__str__() + ".png")
+            copy_rename(file, name + " " + str(i).zfill(digits) + ".png")
         break
 
 
@@ -62,7 +63,6 @@ root.title("File Copy")
 root.geometry("700x180")
 root.resizable(0, 0)
 
-
 canvas = tk.Canvas(root, height=100, width=700, bg="#37393F")
 canvas.pack()
 
@@ -80,4 +80,3 @@ copy.pack()
 
 update_strings()
 root.mainloop()
-
