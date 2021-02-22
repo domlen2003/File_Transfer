@@ -41,6 +41,7 @@ def copy():
 
 
 def copy_rename(old_file_name, new_file_name):
+    print("Copying and renaming %s to %s" % (old_file_name, new_file_name))
     src_file = os.path.join(src_dir, old_file_name)
     shutil.copy(src_file, dst_dir)
 
